@@ -1,0 +1,17 @@
+node_modules
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+
+# frontend
+frontend/node_modules
+# frontend/build
+
+# backend
+backend/node_modules
+
+# worker
+worker/node_modules
+
+*.log
