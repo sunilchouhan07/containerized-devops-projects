@@ -21,11 +21,11 @@ jobs:
       - name: build and push backend 
         working-directory: project6/backend
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/node-backend-app:latest .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/node-backend-app:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/node-backend-app:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/node-backend-app:latest
       
       - name: build and push frontend 
         working-directory: project6/frontend
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/react-frontend-app:latest .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/react-frontend-app:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/react-frontend-app:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/react-frontend-app:latest
