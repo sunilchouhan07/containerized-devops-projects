@@ -19,13 +19,13 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: build and push backend 
-        working-directory: /project6/backend
+        working-directory: project6/backend
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/node-backend-app .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/node-backend-app
       
       - name: build and push frontend 
-        working-directory: /project6/frontend
+        working-directory: project6/frontend
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/react-frontend-app .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/react-frontend-app
